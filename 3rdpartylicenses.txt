@@ -347,22 +347,18 @@ MIT
 
 @angular/material/table
 
-@angular/material/core
-
-@angular/material/form-field
-
 @angular/forms
 MIT
 
-@angular/material/select
-
-@angular/material/paginator
+@angular/material/form-field
 
 @angular/material/tree
 
 @angular/material/sidenav
 
 @angular/material/toolbar
+
+@angular/material/core
 
 @angular/material/list
 
