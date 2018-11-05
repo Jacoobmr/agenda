@@ -1,61 +1,67 @@
 <form [formGroup]="personForm" novalidate (ngSubmit)="onSubmit()">
-  <mat-card class="shipping-card">
-    <mat-card-header>
-      <mat-card-title>Nuevo Usuario</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-
-      <div class="row">
-        <div class="col">
-          <mat-form-field class="full-width">
-            <input matInput placeholder="Nombre" formControlName="name">
-            <mat-error *ngIf="personForm.controls['name'].hasError('required')">
-              El Nombre es <strong>Obligatorio</strong>
-            </mat-error>
-          </mat-form-field>
+    <mat-card class="shipping-card">
+      <mat-card-header>
+        <mat-card-title>Nueva Usuario</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+  
+  
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Nombre" formControlName="name">
+              <mat-error *ngIf="personForm.controls['name'].hasError('required')">
+                El nombre es <strong>obligatorio</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Apellido" formControlName="lastname">
+              <mat-error *ngIf="personForm.controls['lastname'].hasError('required')">
+                Apellido <strong>obligatorio</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
         </div>
-        <div class="col">
-          <mat-form-field class="full-width">
-            <input matInput placeholder="Apellido" formControlName="lastname">
-            <mat-error *ngIf="personForm.controls['lastname'].hasError('required')">
-              Apellido<strong>Obligatorio</strong>
-            </mat-error>
-          </mat-form-field>
-        </div>
-      </div>
-
-      <div class="row">
+  
+  
+        <div class="row">
           <div class="col">
             <mat-form-field class="full-width">
               <input matInput placeholder="Email" formControlName="email">
               <mat-error *ngIf="personForm.controls['email'].hasError('required')">
-                El Email es <strong>Obligatorio</strong>
+                El email es <strong>requerido</strong>
               </mat-error>
+  
               <mat-error *ngIf="personForm.controls['email'].hasError('email')">
-                  Debes Escribir una direccion de correo electronico
-                </mat-error>
+                Escribe una direccion de correo electronico valida
+              </mat-error>
             </mat-form-field>
           </div>
           <div class="col">
             <mat-form-field class="full-width">
               <input matInput placeholder="Teléfono" formControlName="phone">
               <mat-error *ngIf="personForm.controls['phone'].hasError('required')">
-                El Telefono es <strong>Obligatorio</strong>
+                Telefono <strong>Obligatorio</strong>
               </mat-error>
             </mat-form-field>
           </div>
         </div>
+  
+  
         <div class="row">
-            <div class="col">
-              <mat-form-field class="full-width">
-                <input matInput placeholder="avatar" formControlName="avatar">
-              </mat-form-field>
-            </div>
-            
-       
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button color="primary" type="submit">Enviar</button>
-    </mat-card-actions>
-  </mat-card>
-</form>
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Avatar" formControlName="avatar">
+            </mat-form-field>
+          </div>
+        </div>
+  
+      </mat-card-content>
+      <mat-card-actions>
+          <button mat-raised-button color="primary" type="submit">Enviar</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+  
