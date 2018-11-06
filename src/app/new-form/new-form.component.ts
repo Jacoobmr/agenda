@@ -11,7 +11,7 @@ export class NewFormComponent {
   personForm = this.fb.group({
     name: [null, Validators.required],
     lastName: [null, Validators.required],
-    email: [null, Validators.email, Validators.required],
+    email: [null, [Validators.email, Validators.required]],
     phone: [null, Validators.required],
     avatar: [null],
   });
