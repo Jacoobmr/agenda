@@ -5,14 +5,14 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class PersonService {
-
   constructor(private http: HttpClient) { }
 
-  configUrl = 'assets/config.json';
-  apiUrl = 'https://agenda-api-cjmr.now.sh/api/persons';
+  private configUrl = 'assets/config.json';
+  private apiUrl =
+  'https://agenda-api-cjmr.now.sh/api/persons';
 
   getConfig() {
-    return this.http.get('this.configUrl');
+    return this.http.get(this.configUrl);
   }
   getPersons() {
     return this.http.get(this.apiUrl);

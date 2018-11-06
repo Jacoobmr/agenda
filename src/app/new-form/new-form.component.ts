@@ -20,8 +20,9 @@ export class NewFormComponent {
   onSubmit() {
     console.log(this.personForm.value);
     this.personService.addPerson(this.personForm.value).subscribe(response => {
-      console.log('OK: ', response); },
-       error => {
+      console.log('OK: ', response);
+    },
+    error => {
         console.log('ERROR: ', error);
       }
      );

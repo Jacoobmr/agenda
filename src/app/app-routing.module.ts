@@ -8,11 +8,11 @@ import { NewFormComponent } from './new-form/new-form.component';
 
 const routes: Routes = [
   { path: '', component: MyDashComponent },
-  { path: 'lista', component: MyTableComponent },
-  { path: 'nuevo', component: NewFormComponent },
+  { path: 'lista' , component: MyTableComponent },
+  { path: 'nuevo' , component: NewFormComponent },
   { path: 'arbol' , component: MyTreeComponent },
   { path: 'dd' , component: MyDragComponent },
-  { path: '**', redirectTo: '' }
+  { path: '**' , redirectTo: '' }
 ];
 
 @NgModule({

@@ -14,7 +14,7 @@ export class MyTableComponent implements OnInit {
   dataSource = new PersonDataSource(this.personService);
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['name', 'lastName'];
+  displayedColumns = ['name', 'lastName', 'email'];
 
   constructor (private personService: PersonService) {
   this.personService.getConfig().subscribe( config => {
@@ -36,6 +36,5 @@ export class PersonDataSource extends DataSource<any> {
   connect(): Observable<any> {
     return this.personService.getPersons();
   }
-  disconnect() {
-  }
+  disconnect() {}
 }
